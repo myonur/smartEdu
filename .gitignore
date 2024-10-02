@@ -146,4 +146,5 @@ dist
 # Teporary Files
 temp/
 node_modules/
+public/
 # End of https://www
