@@ -31,6 +31,7 @@ router.route('/logout').get(authController.logoutUser);
 router.route('/dashboard').get(authMiddleware, authController.getDashboardPage);
 
 router.route('/courses/enroll').post(courseController.enrollCourse);
+router.route('/courses/release').post(courseController.releaseCourse);
 
 
 

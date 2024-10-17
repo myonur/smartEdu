@@ -31,10 +31,10 @@ exports.loginUser = async (req, res) => {
 
         if (user) {
             bcrypt.compare(password, user.password, (err, same) => {
-                if (same) {                                       
+                                               
                     req.session.userID = user._id;
                     res.status(200).redirect('/dashboard');
-                }
+             
             });
         }
     } catch (error) {
