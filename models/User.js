@@ -39,6 +39,7 @@ const UserSchema = new Schema({
 //     })
 // }) 
 
+// mongo kayıt değiştiğinde her seferinde password alanınıda değiştiriyor. İşte değiştirmemesi için save değiştirildi
 
 UserSchema.pre('save', function(next) {
     const user = this;

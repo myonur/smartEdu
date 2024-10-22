@@ -41,6 +41,7 @@ router.route('/courses').get(courseController.getAllCourses);
 router.route('/courses').post(roleMiddleware(["teacher","admin" ]), courseController.createCourse);
 router.route('/courses/:slug').get(courseController.getCourse);
 router.route('/courses/:slug').delete(courseController.deleteCourse);
+router.route('/courses/:slug').put(courseController.updateCourse);
 
 router.route('/categories').post(categoryController.createCategory);
 
