@@ -44,7 +44,7 @@ app.use((req, res, next) => {
 });
 
 app.use(methodOverride('_method', {
-  methods: ['POST', 'GET']
+  methods: ['POST', 'GET', 'DELETE']
 }));
 
 

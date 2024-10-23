@@ -52,6 +52,9 @@ router.route('/login').get(redirectMiddleware, pageController.getLoginPage);
 router.route('/login').post(authController.loginUser);
 router.route('/logout').get(authController.logoutUser);
 router.route('/dashboard').get(authMiddleware, authController.getDashboardPage);
+router.route('/users/:id').delete(authController.deleteUser);
+router.route('/categories/:id').delete(categoryController.deleteCategory);
+
 
 router.route('/courses/enroll').post(courseController.enrollCourse);
 router.route('/courses/release').post(courseController.releaseCourse);

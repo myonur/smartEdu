@@ -83,3 +83,17 @@ exports.getDashboardPage = async (req, res) => {
     });
 };
 
+exports.deleteUser = async (req, res) => {  
+    try {
+
+      await User.findByIdAndDelete(req.params.id);
+      await Course.deleteMany({ user: req.params.id });
+  
+      res.status(200).redirect('/dashboard');
+    } catch (error) {
+      res.status(400).json({
+        status: 'fail',
+        error,
+      });
+    }
+  };
